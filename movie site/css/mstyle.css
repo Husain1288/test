@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+	background:#111;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+.container .left{
+    width: 15%;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 20px 0;
+    border-right: 1px solid #222;
+    position: fixed;
+}
+
+.container .left p{
+    font-size: 18px;
+    color: grey;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+.container .left .flow{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 20px;
+    margin: 1px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+}
+.container .left .flow:nth-child(5){
+    margin-bottom: 30px;
+}
+.container .left .flow:hover:not(.home){
+    background-color: #222;
+}
+
+.container .left .home h2{
+    color: red;
+    font-weight: lighter;
+}
+.container .left .home span{
+    color: red;
+}
+.container .left .home{
+    background-color: rgba(236,35,35,0.212);
+}
+.container .flow span{
+    font-size: 25px;
+    color: rgb(226,226,226);
+}
+.container .flow h2{
+    text-transform: capitalize;
+    color: rgb(226,226,226);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.container .right{
+    width: 85%;
+    position: absolute;
+    right: 0;
+    background-color: #111;
+}
+.right .heading{
+    display: flex;
+    color: rgb(226,226,226);
+}
+.right .heading .head-content{
+    width: 50%;
+    padding: 20px;
+    background-color: black;
+}
+
+.right .heading .head-content h2{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.head-content .rating{
+    display: flex;
+    margin: 30px 0;
+}
+.head-content .btn{
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border: 1px solid white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+.head-content .btn .material-icons{
+    font-size: 20px;
+}
+
+.head-content .btn .star{
+    color: greenyellow;
+}
+
+.head-content p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.head-content .btn-main{
+    border-radius: 5px;
+    color: rgb(226,226,226);
+    text-decoration: none;
+    width: 120px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: red;
+    border: none;
+    text-transform: capitalize;
+}
+
+.right .heading .img-container{
+    width: 50%;
+    height: 500px;
+    background: url(https://we.yaqot.me/uploads/articles/1277d77d.jpg) no-repeat center center / cover;
+}
+
+.right .heading .img-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.trending{
+    margin-top: 40px;
+    padding-left: 20px;
+}
+h1{
+    color: rgb(226,226,226);
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+h1 span{
+    font-size: 16px;
+    color: red;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.trending .movie-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+.list{
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+
+.list::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: all 0.4s;
+}
+
+.list:hover::before{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.list:nth-child(1)::before{
+    content: ' زمن العجاج';
+}
+.list:nth-child(2)::before{
+    content: 'بابا حه ';
+}
+
+.list:nth-child(3)::before{
+    content: 'نقطة انتهى';
+}
+.list:nth-child(4)::before{
+    content: 'لانش بوكس ';
+}
+
+.list:nth-child(5)::before{
+    content: 'العربجي ';
+}
+
+
+
+
+.list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/ec6bf9ad.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(2){
+    background: url(https://we.yaqot.me/uploads/articles/89d8b735.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(3){
+    background: url(https://we.yaqot.me/uploads/articles/14519f0d.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(4){
+    background: url(https://we.yaqot.me/uploads/articles/581ef334.jpg) no-repeat center center /cover;
+}
+
+.list:nth-child(5){
+    background: url(https://we.yaqot.me/uploads/articles/bf31211d.jpg) no-repeat center center /cover;
+}
+
+
+.tv .list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/8678d7ed.jpg) no-repeat center center /cover;
+}
+
+.tv .list:nth-child(2){
+    background: url(https://g.dramas7.com:82/uploads/thumbs/2ba43cc69-1.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(3){
+    background: url(https://m.yaqot.me/upload/articles/51989da6.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(4){
+    background: url(https://m.yaqot.me/upload/articles/3509a61e.jpg) no-repeat center center /cover;
+}
+.tv .list:nth-child(5){
+    background: url(https://m.yaqot.me/upload/articles/33ec5fe9.jpg) no-repeat center center /cover;
+}
+
+
+.tv .list:nth-child(1)::before{
+    content: 'الاب الضال ';
+}
+.tv .list:nth-child(2)::before{
+    content: 'one piece';
+}
+
+.tv .list:nth-child(3)::before{
+    content: 'مسلسل العيلة دي ';
+}
+.tv .list:nth-child(4)::before{
+    content: 'مسلسل طير بينا يا قلبيى';
+}
+
+.tv .list:nth-child(5)::before{
+    content: 'مسلسل الاصلي ';
+}
+
+.tv {
+    margin-bottom: 50px;
+}
+
+
+
+.ls .list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/8678d7ed.jpg) no-repeat center center /cover;
+}
+
+.ls .list:nth-child(2){
+    background: url(https://we.yaqot.me/uploads/articles/6cc11467.jpg) no-repeat center center /cover;
+}
+.ls .list:nth-child(3){
+    background: url(https://we.yaqot.me/uploads/articles/a54253cd.jpg) no-repeat center center /cover;
+}
+.ls .list:nth-child(4){
+    background: url(https://we.yaqot.me/uploads/articles/f8b95b96.jpg) no-repeat center center /cover;
+}
+.ls .list:nth-child(5){
+    background: url(https://we.yaqot.me/uploads/articles/87b8affa.jpg) no-repeat center center /cover;
+}
+
+
+.ls .list:nth-child(1)::before{
+    content: 'اعلى نسبة مشاهدة ';
+}
+.ls .list:nth-child(2)::before{
+    content: 'محتوي خابط ';
+}
+
+.ls .list:nth-child(3)::before{
+    content: ' صلة رحم';
+}
+.ls .list:nth-child(4)::before{
+    content: 'بيت ابونا';
+}
+
+.ls .list:nth-child(5)::before{
+    content: 'كوبرا ';
+}
+
+.tv {
+    margin-bottom: 50px;
+}
+
+
+.ms .list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/a0351a6a.jpg) no-repeat center center /cover;
+}
+
+.ms .list:nth-child(2){
+    background: url(https://m.yaqot.me/upload/articles/d8344579.jpg) no-repeat center center /cover;
+}
+.ms .list:nth-child(3){
+    background: url(https://we.yaqot.me/uploads/articles/f60a2034.jpg) no-repeat center center /cover;
+}
+.ms .list:nth-child(4){
+    background: url(https://we.yaqot.me/uploads/articles/c43cfcc4.jpg) no-repeat center center /cover;
+}
+.ms .list:nth-child(5){
+    background: url(https://we.yaqot.me/uploads/articles/285b3c94.jpg) no-repeat center center /cover;
+}
+
+
+.ms .list:nth-child(1)::before{
+    content: ' خالد نور وولده نور خالد ';
+}
+.ms .list:nth-child(2)::before{
+    content: 'الكبير اوي  ';
+}
+
+.ms .list:nth-child(3)::before{
+    content: '2024';
+}
+.ms .list:nth-child(4)::before{
+    content: 'رامز جاب من الاخر';
+}
+
+.ms .list:nth-child(5)::before{
+    content: ' نظرة حب  ';
+}
+
+
+.fs .list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/7ea53693.jpg) no-repeat center center /cover;
+}
+
+.fs .list:nth-child(2){
+    background: url(https://we.yaqot.me/uploads/articles/85741968.jpg) no-repeat center center /cover;
+}
+.fs .list:nth-child(3){
+    background: url(https://we.yaqot.me/uploads/articles/8900b27f.jpg) no-repeat center center /cover;
+}
+.fs .list:nth-child(4){
+    background: url(https://we.yaqot.me/uploads/articles/a0c335c7.jpeg) no-repeat center center /cover;
+}
+.fs .list:nth-child(5){
+    background: url(https://we.yaqot.me/uploads/articles/093566bb.jpg) no-repeat center center /cover;
+}
+
+
+.fs .list:nth-child(1)::before{
+    content: 'العتاوة  ';
+}
+.fs .list:nth-child(2)::before{
+    content: 'زوجة واحدة لا تكفي ';
+}
+
+.fs .list:nth-child(3)::before{
+    content: 'كامل العدد';
+}
+.fs .list:nth-child(4)::before{
+    content: ' تاج ';
+}
+
+.fs .list:nth-child(5)::before{
+    content: ' نعمة الافوكاتو  ';
+}
+
+
+
+.is .list:nth-child(1){
+    background: url(https://we.yaqot.me/uploads/articles/269c443d.jpg) no-repeat center center /cover;
+}
+
+.is .list:nth-child(2){
+    background: url(https://we.yaqot.me/uploads/articles/244fe5d3.jpg) no-repeat center center /cover;
+}
+.is .list:nth-child(3){
+    background: url(https://we.yaqot.me/uploads/articles/9a26e0b9.jpg) no-repeat center center /cover;
+}
+.is .list:nth-child(4){
+    background: url(https://a.yaqot.me/uploads/articles/f3f684b0.jpg) no-repeat center center /cover;
+}
+.is .list:nth-child(5){
+    background: url(https://as.yaqot.net/upload/articles/bec3ab9f.jpg) no-repeat center center /cover;
+}
+
+
+.is .list:nth-child(1)::before{
+    content: 'الشرار    ';
+}
+.is .list:nth-child(2)::before{
+    content: 'جاك العلم ';
+}
+
+.is .list:nth-child(3)::before{
+    content: 'بيت الرفاعي';
+}
+.is .list:nth-child(4)::before{
+    content: ' امبراطورية م   ';
+}
+
+.is .list:nth-child(5)::before{
+    content: '  بابا المجال ';
+}
+
+
+
+.ps .list:nth-child(1){
+    background: url(https://pl.yaqot.me/upload/articles/ec0ddba6.jpg) no-repeat center center /cover;
+}
+
+.ps .list:nth-child(2){
+    background: url(https://pl.yaqot.me/upload/articles/a93e114f.jpg) no-repeat center center /cover;
+}
+.ps .list:nth-child(3){
+    background: url(https://07224c45.jpg) no-repeat center center /cover;
+}
+.ps .list:nth-child(4){
+    background: url(httpss/1442940d.png) no-repeat center center /cover;
+}
+.ps .list:nth-child(5){
+    background: url(https:/aes/bec3ab9f.jpg) no-repeat center center /cover;
+}
+
+
+.ps .list:nth-child(1)::before{
+    content: 'اللعبة ';
+}
+.ps .list:nth-child(2)::before{
+    content: 'جروب المامي  ';
+}
+
+.ps .list:nth-child(3)::before{
+    content: '';
+}
+.ps .list:nth-child(4)::before{
+    content: '   ';
+}
+
+.is .list:nth-child(5)::before{
+    content: '  ';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
